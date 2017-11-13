@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -11,11 +5,12 @@ import {
   Text,
   Image,
   View,
+  Button,
   ImageBackground,
   AsyncStorage,
   TouchableHighlight
 } from 'react-native';
-
+import Modal from 'react-native-modal';
 import { Player } from 'react-native-audio-toolkit';
 
 const DAYS = [
@@ -72,7 +67,7 @@ const POS = [
 ];
 
 class App extends Component {
-  state = { bg: null };
+  state = { today: null, isModalVisible: false };
   componentWillMount() {
     this.player = null;
     this.setState({
@@ -81,43 +76,57 @@ class App extends Component {
   }
 
   onButtonPress(day) {
-    if (this.state.today >= day) {
-      console.log('good');
-    } else {
-    }
-
-    // this.setState({ bg: day + '.jpg' });
-    // this.player = new Player('01.mp3', {
-    //   autoDestroy: false
-    // }).play();
+    this._showModal();
+    this.player = new Player('01.mp3', {
+      autoDestroy: false
+    }).play();
   }
+
+  pauseAudio() {
+    this.player.pause();
+  }
+
+  stopAudio() {
+    this.player.stop();
+  }
+
   renderCalendar(days) {
     return days.map((d, i) => {
-      let tmpStyle;
-      if (d > 300) {
+      let tmpStyle, tmpTxtStyle;
+      if (d > 10) {
         tmpStyle = {
           top: POS[i].y,
           left: POS[i].x,
           position: 'absolute',
           backgroundColor: 'white',
+          borderWidth: 0.5,
+          borderColor: '#333',
           opacity: 0.3,
           width: 60,
           height: 45
+        };
+        tmpTxtStyle = {
+          color: '#333',
+          textAlign: 'center',
+          paddingTop: 15
         };
       } else {
         tmpStyle = {
           top: POS[i].y,
           left: POS[i].x,
           position: 'absolute',
-          backgroundColor: '#333',
+          backgroundColor: '#888',
           opacity: 0.8,
+          borderWidth: 0.5,
+          borderColor: '#d6d7da',
           width: 60,
           height: 45 //,
-          // transform: [
-          //   { perspective: 1300 },
-          //   { rotateX: '60deg' },
-          //   { rotateY: '35deg' }
-          // ]
+          // transform: [{ perspective: 1300 }, { rotateY: '35deg' }]
+        };
+        tmpTxtStyle = {
+          color: '#fff',
+          textAlign: 'center',
+          paddingTop: 15
         };
       }
 
@@ -129,18 +138,16 @@ class App extends Component {
           underlayColor={'#333'}
           onPress={this.onButtonPress.bind(this, d)}
         >
-          <Text
-            style={{ textAlign: 'center', paddingTop: 15, color: '#ff0000' }}
-          >
-            {d}
-          </Text>
+          <Text style={tmpTxtStyle}>{d}</Text>
         </TouchableHighlight>
       );
     });
   }
+  _showModal = () => this.setState({ isModalVisible: true });
+
   render() {
     return (
-      <View>
+      <View style={{ flex: 1 }}>
         <ImageBackground
           source={{ uri: this.state.today + '.jpg' }}
           style={{
@@ -149,14 +156,38 @@ class App extends Component {
             zIndex: 1
           }}
         >
-          {/* <Text style={{ position: 'absolute', top: 100, left: 100 }}>
-            {this.date.toString()}
-          </Text> */}
           {this.renderCalendar(DAYS)}
         </ImageBackground>
+        <Modal
+          isVisible={this.state.isModalVisible}
+          onBackdropPress={() => this.setState({ isModalVisible: false })}
+        >
+          <View style={{ backgroundColor: 'white' }}>
+            <Button
+              onPress={this.pauseAudio.bind(this)}
+              title="Pause"
+              ostyle={styles.buttonStyle}
+              color="#ff6600"
+              accessibilityLabel="Learn more about this purple button"
+            />
+            <Button
+              onPress={this.stopAudio.bind(this)}
+              title="Stop"
+              ostyle={styles.buttonStyle}
+              color="#ff6600"
+              accessibilityLabel="Learn more about this purple button"
+            />
+          </View>
+        </Modal>
       </View>
     );
   }
 }
+
+const styles = {
+  buttonStyle: {
+    backgroundColor: '#fff'
+  }
+};
 
 export default App;

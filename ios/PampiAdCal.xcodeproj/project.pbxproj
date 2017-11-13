@@ -37,6 +37,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		C209FBA91FB97FC9007C02D3 /* libReactNativeAudioToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C209FBA71FB97FAC007C02D3 /* libReactNativeAudioToolkit.a */; };
 		C229FB241FB8DAFD000FC0CD /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C229FAED1FB8DAFB000FC0CD /* 10.jpg */; };
 		C229FB251FB8DAFD000FC0CD /* 09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C229FB111FB8DAFB000FC0CD /* 09.jpg */; };
 		C229FB261FB8DAFD000FC0CD /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C229FB121FB8DAFB000FC0CD /* 18.jpg */; };
@@ -60,6 +61,7 @@
 		C2396AE41FB79F7700252CCB /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2396AAC1FB79F7700252CCB /* 02.jpg */; };
 		C2396AE51FB79F7700252CCB /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2396AE21FB79F7700252CCB /* 01.jpg */; };
 		C2396AE61FB79F7700252CCB /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2396AE31FB79F7700252CCB /* 03.jpg */; };
+		C2857FDB1FB97E21001921C8 /* 01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2857FB71FB97E21001921C8 /* 01.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +261,13 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		C209FBA61FB97FAC007C02D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C209FB7F1FB97FAC007C02D3 /* ReactNativeAudioToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5E8FD9831D269F5D00CF68CC;
+			remoteInfo = ReactNativeAudioToolkit;
+		};
 		C2396AB21FB79F7700252CCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -350,6 +359,7 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		C209FB7F1FB97FAC007C02D3 /* ReactNativeAudioToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeAudioToolkit.xcodeproj; path = "../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/ReactNativeAudioToolkit.xcodeproj"; sourceTree = "<group>"; };
 		C229FAED1FB8DAFB000FC0CD /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		C229FB111FB8DAFB000FC0CD /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.jpg; sourceTree = "<group>"; };
 		C229FB121FB8DAFB000FC0CD /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
@@ -373,6 +383,7 @@
 		C2396AAC1FB79F7700252CCB /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
 		C2396AE21FB79F7700252CCB /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
 		C2396AE31FB79F7700252CCB /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
+		C2857FB71FB97E21001921C8 /* 01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 01.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +399,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C209FBA91FB97FC9007C02D3 /* libReactNativeAudioToolkit.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -564,6 +576,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C209FB7F1FB97FAC007C02D3 /* ReactNativeAudioToolkit.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -592,6 +605,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				C2857FB71FB97E21001921C8 /* 01.mp3 */,
 				C229FB1F1FB8DAFC000FC0CD /* 04.jpg */,
 				C229FB211FB8DAFD000FC0CD /* 05.jpg */,
 				C229FB151FB8DAFB000FC0CD /* 06.jpg */,
@@ -619,6 +633,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PampiAdCalTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				C209FBA81FB97FC9007C02D3 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -643,6 +658,21 @@
 				C2396AB31FB79F7700252CCB /* libRCTBlob-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C209FB801FB97FAC007C02D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C209FBA71FB97FAC007C02D3 /* libReactNativeAudioToolkit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C209FBA81FB97FC9007C02D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -806,6 +836,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = C209FB801FB97FAC007C02D3 /* Products */;
+					ProjectRef = C209FB7F1FB97FAC007C02D3 /* ReactNativeAudioToolkit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1001,6 +1035,13 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		C209FBA71FB97FAC007C02D3 /* libReactNativeAudioToolkit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeAudioToolkit.a;
+			remoteRef = C209FBA61FB97FAC007C02D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C2396AB31FB79F7700252CCB /* libRCTBlob-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1091,6 +1132,7 @@
 				C229FB371FB8DAFD000FC0CD /* 14.jpg in Resources */,
 				C229FB281FB8DAFD000FC0CD /* 13.jpg in Resources */,
 				C2396AE51FB79F7700252CCB /* 01.jpg in Resources */,
+				C2857FDB1FB97E21001921C8 /* 01.mp3 in Resources */,
 				C229FB331FB8DAFD000FC0CD /* 04.jpg in Resources */,
 				C229FB241FB8DAFD000FC0CD /* 10.jpg in Resources */,
 				C229FB2C1FB8DAFD000FC0CD /* 24.jpg in Resources */,
